@@ -1,0 +1,64 @@
+{
+  "name": "opencode-cognition-agent-memory",
+  "version": "0.1.0",
+  "description": "Git-backed agent memory for OpenCode, following the Agent Memory Repo spec.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "agent-memory",
+    "memory"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josevelaz/opencode-cognition-agent-memory.git"
+  },
+  "homepage": "https://github.com/josevelaz/opencode-cognition-agent-memory#readme",
+  "bugs": {
+    "url": "https://github.com/josevelaz/opencode-cognition-agent-memory/issues"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./tui": "./tui.tsx",
+    "./rpc": "./rpc.ts"
+  },
+  "files": [
+    "index.ts",
+    "tui.tsx",
+    "rpc.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit --strict --skipLibCheck --target ES2022 --module ESNext --moduleResolution bundler --lib ES2022,DOM --types node index.ts"
+  },
+  "dependencies": {
+    "@opencode/plugin": "2.0.23",
+    "zod": "4.3.5"
+  },
+  "peerDependencies": {
+    "@opencode/theme": "2.0.23",
+    "@opentui/core": ">=0.5.14",
+    "@opentui/solid": ">=0.5.14",
+    "solid-js": ">=1.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@opencode/theme": {
+      "optional": true
+    },
+    "@opentui/core": {
+      "optional": true
+    },
+    "@opentui/solid": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "20.19.11",
+    "typescript": "5.8.2"
+  }
+}
